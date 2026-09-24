@@ -1,5 +1,587 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>MR Sherif Premium Host | MR PS Store</title><link rel="icon" href="icon0.jpeg"><link rel="stylesheet" href="style.css"></head><body>
-<header class="topbar"><div class="brand"><img src="icon0.jpeg" onerror="this.src='icon0.png'" alt="MR PS"><span>MR PS STORE</span></div><div class="online"><span class="dot"></span>SYSTEM ONLINE</div></header>
-<main class="page"><section class="shell hero"><img class="hero-logo" src="icon0.jpeg" onerror="this.src='icon0.png'" alt="MR PS Store"><div class="eyebrow">MR SHERIF PREMIUM HOST</div><h1>PS4 GoldHEN Multi Firmware</h1><p class="muted">Automatic firmware detection • Smart exploit selection • Up to 13.52</p><div class="launch-card" onclick="location.replace('g2all/index.html')"><div class="launch-icon">5-13</div><div><div class="launch-title">Launch Smart Host</div><div class="launch-sub">Detect firmware automatically and start the correct engine</div></div><div class="arrow">›</div></div></section></main>
-<footer class="footer">Designed by: <a href="https://www.facebook.com/MrPs.Store.eg/" target="_blank">&nbsp;@Mr Sherif&nbsp;</a> | A special thanks to: <a href="https://www.facebook.com/abo.omar.739383" target="_blank">&nbsp;♥ @Abo omar&nbsp;</a> &amp; <a href="https://www.facebook.com/sherif.aref.545" target="_blank">&nbsp;@Eng/Sherif Aref ♥</a></footer>
-</body></html>
+<!DOCTYPE html>
+<html lang="en" manifest="cache.appcache">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MR PS STORE • Smart Launch Host</title>
+<link rel="icon" type="image/png" href="icon0.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scene"></div>
+<main class="app">
+  <header class="nav">
+    <div class="brand-mini"><b>MR PS <span>STORE</span></b><small>PREMIUM PS4 HOST</small></div>
+    <div class="nav-right"><span id="cacheBadge" class="cache-pill">جاري فحص وضع الأوفلاين</span><button class="gear" type="button" title="إعدادات متقدمة" onclick="document.getElementById('advancedPanel').classList.toggle('open')">⚙</button></div>
+  </header>
+
+  <section class="stage">
+    <div class="smart-label">MR PS / SMART HOST</div>
+    <div class="hero-copy" dir="rtl">
+      <h1>جاهز للتشغيل</h1>
+      <p>سيتم اكتشاف إصدار جهازك واختيار مسار التشغيل المناسب تلقائيًا.</p>
+    </div>
+
+    <div class="status-card compact" dir="rtl">
+      <div class="firmware-block"><small>إصدار النظام</small><strong id="badgeFw">جاري اكتشاف جهاز PS4…</strong><span>يتم التعرف على الإصدار تلقائيًا</span></div>
+      <div class="ready-block"><i></i><b>النظام جاهز لبدء التشغيل</b><span>المسار المناسب يتم اختياره تلقائيًا</span></div>
+      <strong id="badgeEngine" class="engine-hidden">اختيار تلقائي</strong>
+    </div>
+    <div class="supported-strip" dir="rtl"><span>الإصدارات المدعومة</span><b>7.xx • 8.xx • 9.xx • 10.xx • 11.xx • 12.00–12.52 • 13.00 • 13.02 • 13.04 • 13.50 • 13.52</b></div>
+
+    <section id="advancedPanel" class="advanced-panel">
+      <div class="option-group"><span class="option-label-title">المحرك المتقدم</span><div class="segmented-control" id="kernel-options">
+        <input type="radio" name="kernel" id="engine-auto" value="auto" checked><label for="engine-auto">تلقائي</label>
+        <input type="radio" name="kernel" id="engine-poops-rthdr" value="poops_rthdr"><label for="engine-poops-rthdr">13.02–13.52</label>
+        <input type="radio" name="kernel" id="engine-poops" value="poops"><label for="engine-poops">12.50–13.00</label>
+        <input type="radio" name="kernel" id="engine-lapse" value="lapse"><label for="engine-lapse">10.00–12.02</label>
+        <input type="radio" name="kernel" id="engine-psfree" value="psfree"><label for="engine-psfree">7.00–9.60</label>
+      </div></div>
+      <div class="fw-selector-wrapper"><span class="option-label-title">الإصدار المستهدف</span><select id="fwSelect" class="fw-dropdown" onchange="onManualFwChange(this.value)">
+        <option value="auto">اكتشاف تلقائي</option><option value="13.52">13.52</option><option value="13.50">13.50</option><option value="13.04">13.04</option><option value="13.02">13.02</option><option value="13.00">13.00</option><option value="12.52">12.52</option><option value="12.50">12.50</option><option value="12.02">12.02</option><option value="12.00">12.00</option><option value="11.52">11.52</option><option value="11.50">11.50</option><option value="11.02">11.02</option><option value="11.00">11.00</option><option value="10.71">10.71</option><option value="10.70">10.70</option><option value="10.50">10.50</option><option value="10.01">10.01</option><option value="10.00">10.00</option><option value="9.60">9.60</option><option value="9.50">9.50</option><option value="9.04">9.04</option><option value="9.03">9.03</option><option value="9.00">9.00</option><option value="8.52">8.52</option><option value="8.50">8.50</option><option value="8.03">8.03</option><option value="8.00">8.00</option><option value="7.55">7.55</option><option value="7.51">7.51</option><option value="7.50">7.50</option><option value="7.02">7.02</option><option value="7.00">7.00</option>
+      </select></div>
+      <div class="toggle-wrapper"><label><input type="checkbox" id="autoJbInput"> تشغيل تلقائي</label><span id="autoJbLabel"></span><span id="countdownBadge" style="display:none"></span><button id="cancelAutoBtn" style="display:none" onclick="stopCountdown()">إلغاء</button></div>
+    </section>
+
+    <button id="jailbreakBtn" class="launch premium-launch" onclick="triggerJailbreak()"><span class="new-badge">NEW</span><span class="launch-logo"><img src="icon0.png" alt="MR PS"></span><span class="launch-copy"><small>MR PS SMART LAUNCH</small><b>بدء تشغيل الجيلبريك</b><em>اضغط للبدء — وسيتم اختيار المسار تلقائيًا</em></span><span class="launch-arrow">‹</span></button>
+
+    <div class="flow" id="journey" dir="rtl">
+      <div class="step" data-min="0"><i>01</i><div><b>فحص الجهاز</b><small>التأكد من الإصدار</small></div></div><span></span>
+      <div class="step" data-min="45"><i>02</i><div><b>بدء التشغيل</b><small>تشغيل المحرك</small></div></div><span></span>
+      <div class="step" data-min="85"><i>03</i><div><b>تحميل GoldHEN</b><small>تجهيز الحمولة</small></div></div><span></span>
+      <div class="step" data-min="100"><i>04</i><div><b>تم بنجاح</b><small>الجهاز جاهز</small></div></div>
+    </div>
+
+    <section class="progress-card" dir="rtl">
+      <div class="progress-head"><span id="statusLabel">النظام جاهز لبدء التشغيل</span><b id="progressPct">0%</b></div>
+      <div class="progress-track"><div id="progressBar" class="progress-fill"></div></div>
+      <button class="log-toggle" onclick="toggleDebugConsole()">عرض التفاصيل التقنية</button><div class="debug-console" id="debugConsole" dir="ltr"></div>
+    </section>
+  </section>
+  <footer><b>MR PS STORE</b><span>Swap • Shop • Fix nonstop</span></footer>
+</main>
+<div id="out" style="display:none"></div><span id="state" style="display:none"></span><div id="msg" style="display:none"></div><div id="spin" style="display:none"></div><div id="console" style="display:none"></div>
+  <script>
+    // System & State Variables
+    let detectedKey = null;
+    let detectedFwNum = null;
+    let selectedFw = "auto";
+    let selectedEngine = localStorage.getItem("gs_engine") || "auto";
+    let timerId = null;
+    let countdownNumber = 5;
+    let exploitTriggered = false;
+    let currentCacheCategory = null;
+
+    // Supported Firmwares map (7.00 to 13.52)
+    const SUPPORTED_FWS = {
+      1352: "poops_rthdr", 1350: "poops_rthdr", 1304: "poops_rthdr", 1302: "poops_rthdr",
+      1300: "poops", 1252: "poops", 1250: "poops",
+      1202: "lapse", 1200: "lapse", 1152: "lapse", 1150: "lapse",
+      1102: "lapse", 1100: "lapse", 1071: "lapse", 1070: "lapse", 1050: "lapse", 1001: "lapse", 1000: "lapse",
+      960: "psfree", 950: "psfree", 904: "psfree", 903: "psfree", 900: "psfree",
+      852: "psfree", 850: "psfree", 803: "psfree", 800: "psfree",
+      755: "psfree", 751: "psfree", 750: "psfree", 702: "psfree", 700: "psfree"
+    };
+
+    // DOM Elements
+    const badgeFw = document.getElementById("badgeFw");
+    const badgeEngine = document.getElementById("badgeEngine");
+    const cacheBadge = document.getElementById("cacheBadge");
+    const fwSelect = document.getElementById("fwSelect");
+    const jailbreakBtn = document.getElementById("jailbreakBtn");
+    const statusLabel = document.getElementById("statusLabel");
+    const progressPct = document.getElementById("progressPct");
+    const progressBar = document.getElementById("progressBar");
+    const debugConsole = document.getElementById("debugConsole");
+    const autoJbInput = document.getElementById("autoJbInput");
+    const autoJbLabel = document.getElementById("autoJbLabel");
+    const countdownBadge = document.getElementById("countdownBadge");
+
+    // Progress Bar Updater
+    function setProgress(percent, message = null) {
+      const p = Math.min(100, Math.max(0, percent));
+      if (progressBar) progressBar.style.width = p + "%";
+      if (progressPct) progressPct.textContent = p + "%";
+      document.querySelectorAll(".step").forEach(function(el){ var m=parseInt(el.getAttribute("data-min"),10)||0; el.classList.toggle("active", p>=m); el.classList.toggle("current", p>=m && (p<100 ? !el.nextElementSibling || !el.nextElementSibling.nextElementSibling || p < (parseInt(el.nextElementSibling.nextElementSibling.getAttribute("data-min"),10)||101) : m===100)); });
+      if (message && statusLabel) {
+        statusLabel.textContent = message;
+        logToDebug("[STATUS] " + message);
+      }
+    }
+    window.setProgress = setProgress;
+
+    // Logging Functions
+    function logToDebug(msg, color = null) {
+      if (!debugConsole) return;
+      const time = new Date().toLocaleTimeString();
+      let styledMsg = msg;
+      if (color) {
+        styledMsg = `<span style="color:${color}">${msg}</span>`;
+      } else if (msg.includes("[+]") || msg.includes("SUCCESS") || msg.includes("complete")) {
+        styledMsg = `<span style="color:#00ff88; font-weight:bold;">✔ ${msg}</span>`;
+      } else if (msg.includes("[-]") || msg.includes("ERROR") || msg.includes("fail")) {
+        styledMsg = `<span style="color:#ff3344; font-weight:bold;">✖ ${msg}</span>`;
+      } else if (msg.includes("[*]") || msg.includes("CACHE") || msg.includes("STAGE")) {
+        styledMsg = `<span style="color:#00f0ff; font-weight:600;">⚡ ${msg}</span>`;
+      }
+      debugConsole.innerHTML += `[${time}] ${styledMsg}\n`;
+      debugConsole.scrollTop = debugConsole.scrollHeight;
+    }
+
+    window.log = function (msg, color = null) {
+      logToDebug(msg, color);
+    };
+
+    window.formatLog = function (msg) {
+      logToDebug(msg);
+    };
+
+    function toggleDebugConsole() {
+      if (!debugConsole) return;
+      debugConsole.style.display = (debugConsole.style.display === "block") ? "none" : "block";
+    }
+
+    function updateCacheBadge(text, cls = "badge-success") {
+      if (!cacheBadge) return;
+      cacheBadge.textContent = text;
+      cacheBadge.className = "badge " + cls;
+    }
+
+    // Firmware Detection
+    function detectPS4() {
+      const ua = navigator.userAgent;
+      const m = /PlayStation\s+4[\/ ](\d+)\.(\d+)/.exec(ua);
+      if (m) {
+        const minor = parseInt(m[2], 16);
+        let ms = minor.toString(16);
+        if (ms.length < 2) ms = "0" + ms;
+        detectedKey = m[1] + "." + ms;
+        detectedFwNum = parseInt(m[1], 10) * 100 + parseInt(ms, 10);
+        const engine = SUPPORTED_FWS[detectedFwNum];
+
+        badgeFw.textContent = `PS4 • إصدار ${detectedKey} ${engine ? '✓' : ''}`;
+        badgeFw.className = engine ? "badge badge-primary" : "badge badge-warning";
+        logToDebug(`PlayStation 4 detected. Firmware: ${detectedKey} (Num: ${detectedFwNum})`);
+
+        if (SUPPORTED_FWS[detectedFwNum]) {
+          fwSelect.value = detectedKey;
+          selectedFw = detectedKey;
+        }
+      } else {
+        badgeFw.textContent = `جاهز للتجربة على جهاز PS4`;
+        badgeFw.className = "badge badge-info";
+        logToDebug("Preview browser detected. PS4 firmware will be detected automatically on console.");
+      }
+      updateEngineBadge();
+    }
+
+    function getEffectiveFwNum() {
+      if (selectedFw !== "auto") {
+        const parts = selectedFw.split(".");
+        return parseInt(parts[0], 10) * 100 + parseInt(parts[1] || "0", 10);
+      }
+      return detectedFwNum || 1352;
+    }
+
+    function getEffectiveFwLabel() {
+      if (selectedFw !== "auto") return selectedFw;
+      return detectedKey || "13.52";
+    }
+
+    // Resolve Active Engine based on Selected or Detected FW
+    function resolveActiveEngine() {
+      if (selectedEngine !== "auto") return selectedEngine;
+      const fwNum = getEffectiveFwNum();
+      if (fwNum >= 1302) return "poops_rthdr";
+      if (fwNum >= 1250) return "poops";
+      if (fwNum >= 1000) return "lapse";
+      if (fwNum >= 600) return "psfree";
+      return "poops_rthdr";
+    }
+
+    function updateEngineBadge() {
+      const eng = resolveActiveEngine();
+      let label = eng.toUpperCase();
+      if (eng === "poops_rthdr") label = "POOPS / RTHDR (13.xx)";
+      else if (eng === "poops") label = "POOPS (12.50-13.00)";
+      else if (eng === "lapse") label = "LAPSE (10.00-12.02)";
+      else if (eng === "psfree") label = "PSFREE (7.00-9.60)";
+      badgeEngine.textContent = `${label}`;
+    }
+
+    function onManualFwChange(val) {
+      selectedFw = val;
+      logToDebug(`Target firmware set to: ${val}`);
+      updateEngineBadge();
+    }
+
+    // Countdown / Auto-Jailbreak controls
+    function stopCountdown() {
+      if (timerId !== null) {
+        clearInterval(timerId);
+        timerId = null;
+      }
+      if (countdownBadge) countdownBadge.style.display = "none";
+      const cancelBtn = document.getElementById("cancelAutoBtn");
+      if (cancelBtn) cancelBtn.style.display = "none";
+      if (autoJbLabel) autoJbLabel.textContent = "Auto Exploit";
+    }
+
+    function startCountdown() {
+      if (!isCachingComplete || exploitTriggered) return;
+      stopCountdown();
+      countdownNumber = 5;
+      if (countdownBadge) {
+        countdownBadge.style.display = "inline-block";
+        countdownBadge.textContent = `(${countdownNumber}s)`;
+      }
+      const cancelBtn = document.getElementById("cancelAutoBtn");
+      if (cancelBtn) cancelBtn.style.display = "inline-block";
+      if (autoJbLabel) autoJbLabel.textContent = "Launching in:";
+      timerId = setInterval(() => {
+        countdownNumber--;
+        if (countdownBadge) countdownBadge.textContent = `(${countdownNumber}s)`;
+        if (countdownNumber <= 0) {
+          stopCountdown();
+          triggerJailbreak();
+        }
+      }, 1000);
+    }
+
+    // Exploit Marks & Stages Hooking
+    window.onExploitMark = function (tag, detail, raw) {
+      const line = tag + (detail ? " " + detail : "");
+      logToDebug(`[EXPLOIT] ${line}`);
+
+      if (tag === "FW") {
+        setProgress(15, `تم التعرف على إصدار النظام: ${detail}`);
+      } else if (tag === "PAIR-STATUS" || tag === "PRIMITIVE") {
+        setProgress(25, "جاري تجهيز المرحلة الأولى...");
+      } else if (tag === "PRIMITIVE-OK") {
+        setProgress(35, "تم تجهيز المرحلة الأولى بنجاح");
+      } else if (tag === "BASES" || tag === "STUBS") {
+        setProgress(45, "جاري تشغيل المحرك المناسب...");
+      } else if (tag.startsWith("PR-") || tag === "PIN-SPLIT") {
+        setProgress(60, "جاري تنفيذ خطوات التشغيل...");
+      } else if (tag === "KREAD-OK" || tag === "KWRITE-OK" || tag === "KRW-OK" || tag === "JB-SOURCES") {
+        setProgress(75, "تم اجتياز مرحلة التشغيل الأساسية");
+      } else if (tag === "KPATCH-BLOB") {
+        setProgress(85, `جاري تطبيق التعديلات المطلوبة (${detail})...`);
+      } else if (tag === "PAYLOAD-BLOB") {
+        setProgress(92, "جاري تحميل GoldHEN...");
+      } else if (tag === "PROOF-SUMMARY-FINAL" || tag === "EXPM1-RESTORED") {
+        setProgress(100, "تم التشغيل بنجاح — GoldHEN جاهز ✓");
+        if (jailbreakBtn) {
+          jailbreakBtn.innerHTML = "<span>✔ GoldHEN Active!</span>";
+          jailbreakBtn.style.background = "linear-gradient(135deg, #00ff88 0%, #00f0ff 100%)";
+          jailbreakBtn.style.boxShadow = "0 0 35px rgba(0, 255, 136, 0.8)";
+        }
+      } else if (/FAIL|ERROR|THREW|ABORTED/i.test(tag)) {
+        setProgress(0, `حدث خطأ أثناء التشغيل: ${tag} (${detail || ""})`);
+        if (jailbreakBtn) {
+          jailbreakBtn.disabled = false;
+          jailbreakBtn.innerHTML = "<span>⚠️ إعادة المحاولة</span>";
+        }
+        exploitTriggered = false;
+      }
+    };
+
+    window.onExploitState = function (t, c) {
+      logToDebug(`[STATE] ${t} (${c || "info"})`);
+    };
+
+    window.onExploitFinish = function (ok) {
+      if (ok) {
+        setProgress(100, "GoldHEN is loaded! You may press the PS button to exit.");
+        if (jailbreakBtn) jailbreakBtn.innerHTML = "<span>✔ GoldHEN Active!</span>";
+      }
+    };
+
+    window.onerror = function (msg, url, line, col, err) {
+      logToDebug(`[UNCAUGHT] ${msg} at ${url}:${line}:${col}`, "#ff3344");
+    };
+
+    window.onunhandledrejection = function (e) {
+      logToDebug(`[PROMISE-REJECT] ${e && e.reason ? (e.reason.message || e.reason) : e}`, "#ff3344");
+    };
+
+    // Script Loader Helper with safety timeout
+    function loadScript(src) {
+      return new Promise((resolve, reject) => {
+        const existing = document.querySelector(`script[data-src="${src}"]`);
+        if (existing) return resolve();
+        const s = document.createElement("script");
+        s.setAttribute("data-src", src);
+        const timer = setTimeout(() => {
+          reject(new Error(`Timed out loading ${src}`));
+        }, 15000);
+        s.onload = () => {
+          clearTimeout(timer);
+          resolve();
+        };
+        s.onerror = (e) => {
+          clearTimeout(timer);
+          reject(new Error(`Failed to load ${src}`));
+        };
+        s.src = src;
+        document.body.appendChild(s);
+      });
+    }
+
+    async function loadScriptSequence(arr) {
+      for (const src of arr) {
+        await loadScript(src);
+      }
+    }
+
+    // Launch Exploit Sequence in-place (No navigation)
+    async function triggerJailbreak() {
+      if (exploitTriggered || (jailbreakBtn && jailbreakBtn.disabled)) return;
+      exploitTriggered = true;
+      if (jailbreakBtn) {
+        jailbreakBtn.disabled = true;
+        jailbreakBtn.innerHTML = '<span>⚙️ جاري تشغيل الجيلبريك...</span>';
+      }
+      stopCountdown();
+
+      const fwNum = getEffectiveFwNum();
+      const fwLabel = getEffectiveFwLabel();
+      const eng = resolveActiveEngine();
+
+      logToDebug("=================================================");
+      logToDebug(`[START] Target FW: ${fwLabel} | Engine: ${eng.toUpperCase()}`);
+      setProgress(10, `Initializing exploit pipeline for FW ${fwLabel}...`);
+
+      try {
+        window.__selectedFw = fwLabel;
+        window.__noAutoRunJb = true;
+        sessionStorage.setItem("lp_target_fw", fwLabel);
+
+        if (eng === "poops_rthdr" || (eng === "auto" && fwNum >= 1302)) {
+          logToDebug("[ENGINE] Running Poops / RTHDR Engine (FW 13.02 - 13.52)...");
+          await loadScriptSequence(["int64.js", "ps4_offsets.js", "core.js", "mem.js", "jb.js"]);
+          if (typeof window.runJb === "function") {
+            await window.runJb();
+          }
+        } else if (eng === "poops" || (eng === "auto" && fwNum >= 1250)) {
+          logToDebug("[ENGINE] Running Poops Engine (FW 12.50 - 13.00)...");
+          await loadScriptSequence(["int64.js", "ps4_offsets.js", "core.js", "mem.js", "chain_poops.js"]);
+          if (typeof window.runPoops === "function") {
+            await window.runPoops();
+          }
+        } else if (eng === "lapse" || (eng === "auto" && fwNum >= 1000)) {
+          logToDebug("[ENGINE] Running Lapse Engine (FW 10.00 - 12.02)...");
+          await loadScriptSequence(["int64.js", "ps4_offsets.js", "core.js", "mem.js", "chain_lapse.js"]);
+          if (typeof window.runLapse === "function") {
+            await window.runLapse();
+          }
+        } else if (eng === "psfree" || (eng === "auto" && fwNum >= 600)) {
+          logToDebug("[ENGINE] Running PSFree Engine (FW 7.00 - 9.60)...");
+          await loadScriptSequence(["bundle.js"]);
+          if (typeof doJBwithPSFreeLapseExploit === "function") {
+            await doJBwithPSFreeLapseExploit();
+          }
+        } else {
+          logToDebug(`[WARN] Falling back to default Poops / RTHDR engine...`);
+          await loadScriptSequence(["int64.js", "ps4_offsets.js", "core.js", "mem.js", "jb.js"]);
+          if (typeof window.runJb === "function") {
+            await window.runJb();
+          }
+        }
+      } catch (err) {
+        logToDebug(`[ERROR] Exploit halted: ${err && err.message ? err.message : err}`);
+        setProgress(0, `توقف التشغيل: ${err && err.message ? err.message : err}`);
+        if (jailbreakBtn) {
+          jailbreakBtn.disabled = false;
+          jailbreakBtn.innerHTML = '<span>⚠️ إعادة المحاولة</span>';
+        }
+        exploitTriggered = false;
+      }
+    }
+
+    // Force Reinstall / Update Offline Cache
+    function forceReinstallCache() {
+      stopCountdown();
+      exploitTriggered = false;
+      isCachingComplete = false;
+      localStorage.removeItem("gs_cached");
+      if (jailbreakBtn) {
+        jailbreakBtn.disabled = true;
+        jailbreakBtn.innerHTML = '<span>⏳ Caching Offline...</span>';
+      }
+      updateCacheBadge("⏳ Updating...", "badge-warning");
+      setProgress(5, "جاري التحقق من ملفات التشغيل للأوفلاين...");
+      logToDebug("[CACHE] Manual cache reinstall initiated. Updating ApplicationCache...");
+
+      const ac = window.applicationCache;
+      if (ac) {
+        try {
+          ac.update();
+        } catch (err) {
+          logToDebug(`[CACHE] ac.update(): ${err && err.message ? err.message : err}. Reloading...`);
+          setTimeout(() => location.reload(), 600);
+        }
+      } else {
+        location.reload();
+      }
+    }
+
+    // Native ApplicationCache Lifecycle Manager (Direct 100% Offline Support)
+    let isCachingComplete = false;
+
+    function setupAppCache() {
+      const ac = window.applicationCache;
+      const fwLabel = getEffectiveFwLabel();
+
+      function onCacheReady(msg, announce = true) {
+        isCachingComplete = true;
+        updateCacheBadge("● 100% OFFLINE READY", "badge-success");
+        if (announce) {
+          logToDebug(`[CACHE] ${msg}`);
+        }
+        if (jailbreakBtn && !exploitTriggered) {
+          jailbreakBtn.disabled = false;
+          jailbreakBtn.innerHTML = '<span class="new-badge">NEW</span><span class="launch-logo"><img src="icon0.png" alt="MR PS"></span><span class="launch-copy"><small>MR PS SMART LAUNCH</small><b>بدء تشغيل الجيلبريك</b><em>اضغط للبدء — وسيتم اختيار المسار تلقائيًا</em></span><span class="launch-arrow">‹</span>';
+        }
+        // ONLY launch auto-exploit if OFFLINE and explicitly enabled by user
+        if (!navigator.onLine && autoJbInput && autoJbInput.checked && !timerId && !exploitTriggered) {
+          startCountdown();
+        }
+      }
+
+      if (!ac) {
+        onCacheReady("Browser does not support ApplicationCache.", false);
+        return;
+      }
+
+      if (ac.status === ac.IDLE) {
+        setProgress(100, `تم تجهيز ملفات الأوفلاين بالكامل — يمكنك بدء التشغيل.`);
+        onCacheReady(`Firmware ${fwLabel} suite verified in offline cache.`);
+      } else if (!navigator.onLine) {
+        setProgress(100, `وضع الأوفلاين جاهز بالكامل — اضغط بدء التشغيل.`);
+        onCacheReady(`Operating offline from local cache.`);
+      } else {
+        if (jailbreakBtn) {
+          jailbreakBtn.disabled = true;
+          jailbreakBtn.innerHTML = '<span>⏳ Caching Offline...</span>';
+        }
+        updateCacheBadge("⏳ Checking Cache...", "badge-info");
+        setProgress(0, "Connecting to host & checking offline manifest...");
+      }
+
+      ac.addEventListener("checking", function () {
+        logToDebug("[CACHE] Checking offline cache manifest on server...");
+        updateCacheBadge("⏳ Checking Cache...", "badge-info");
+        if (jailbreakBtn && !exploitTriggered) {
+          jailbreakBtn.disabled = true;
+          jailbreakBtn.innerHTML = '<span>⏳ Checking Cache...</span>';
+        }
+      });
+
+      ac.addEventListener("downloading", function () {
+        isCachingComplete = false;
+        stopCountdown();
+        if (jailbreakBtn) {
+          jailbreakBtn.disabled = true;
+          jailbreakBtn.innerHTML = '<span>⏳ Caching Offline...</span>';
+        }
+        updateCacheBadge("⏳ Caching Files...", "badge-warning");
+        setProgress(1, `Downloading offline exploit suite for FW ${fwLabel}...`);
+        logToDebug(`[CACHE] Downloading offline files into PS4 cache...`);
+      });
+
+      ac.addEventListener("progress", function (e) {
+        if (e && e.total) {
+          const pct = Math.round((e.loaded / e.total) * 100);
+          setProgress(pct, `Caching offline assets: ${e.loaded}/${e.total} (${pct}%)`);
+          updateCacheBadge(`⏳ Caching ${pct}%`, "badge-warning");
+        }
+      });
+
+      ac.addEventListener("cached", function () {
+        isCachingComplete = true;
+        setProgress(100, "تم حفظ جميع ملفات التشغيل للأوفلاين بنجاح.");
+        logToDebug("[CACHE] Host successfully stored in PS4 offline cache.");
+        localStorage.setItem("gs_cached", "true");
+        updateCacheBadge("● 100% OFFLINE READY", "badge-success");
+        if (jailbreakBtn && !exploitTriggered) {
+          jailbreakBtn.disabled = false;
+          jailbreakBtn.innerHTML = '<span class="new-badge">NEW</span><span class="launch-logo"><img src="icon0.png" alt="MR PS"></span><span class="launch-copy"><small>MR PS SMART LAUNCH</small><b>بدء تشغيل الجيلبريك</b><em>اضغط للبدء — وسيتم اختيار المسار تلقائيًا</em></span><span class="launch-arrow">‹</span>';
+        }
+      });
+
+      ac.addEventListener("updateready", function () {
+        try { ac.swapCache(); } catch (e) {}
+        setProgress(100, "Cache updated with latest version! Reloading in 2s...");
+        updateCacheBadge("● OFFLINE UPDATE READY", "badge-success");
+        localStorage.setItem("gs_cached", "true");
+        setTimeout(() => location.reload(), 2000);
+      });
+
+      ac.addEventListener("noupdate", function () {
+        isCachingComplete = true;
+        localStorage.setItem("gs_cached", "true");
+        setProgress(100, "ملفات الأوفلاين محدثة وجاهزة بالكامل.");
+        onCacheReady("Cache is up to date.");
+      });
+
+      ac.addEventListener("error", function () {
+        if (!navigator.onLine || localStorage.getItem("gs_cached") === "true") {
+          onCacheReady("Running in offline mode from cache.");
+        } else {
+          logToDebug("[CACHE] Cache notice (offline or network idle).");
+          onCacheReady("Ready.");
+        }
+      });
+    }
+
+    // Global Initialization
+    document.addEventListener("DOMContentLoaded", function () {
+      detectPS4();
+
+      // Exploit chain radio buttons
+      const radios = document.querySelectorAll('input[name="kernel"]');
+      radios.forEach(r => {
+        if (r.value === selectedEngine) r.checked = true;
+        r.addEventListener("change", function (e) {
+          selectedEngine = e.target.value;
+          localStorage.setItem("gs_engine", selectedEngine);
+          updateEngineBadge();
+          logToDebug(`Exploit chain manually set to: ${selectedEngine.toUpperCase()}`);
+        });
+      });
+
+      // Auto-Jailbreak checkbox
+      const storedAutoJb = localStorage.getItem("gs_autojb") === "true";
+      if (autoJbInput) {
+        autoJbInput.checked = storedAutoJb;
+        autoJbInput.addEventListener("change", function () {
+          localStorage.setItem("gs_autojb", autoJbInput.checked);
+          if (autoJbInput.checked && isCachingComplete) startCountdown();
+          else stopCountdown();
+        });
+      }
+
+      // Launch button listener
+      if (jailbreakBtn) {
+        jailbreakBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          triggerJailbreak();
+        });
+      }
+
+      // Check URL params for debug and auto-run
+      const urlParams = new URLSearchParams(location.search);
+      if (urlParams.get("log") === "1" && debugConsole) {
+        debugConsole.style.display = "block";
+      }
+      if (urlParams.get("runnow") === "1") {
+        setTimeout(triggerJailbreak, 100);
+      }
+
+      // Initialize AppCache lifecycle
+      setupAppCache();
+    });
+  </script>
+</body>
+</html>
