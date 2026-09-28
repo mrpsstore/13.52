@@ -1,6 +1,9 @@
 CACHE MANIFEST 
 
-CACHE: 
+# MRPS UI 2026-09-28 single-button v2
+CACHE:
+../mrps-ui.css
+../icon0.jpeg 
 ../img.jpg
 ../style.css
 goldhen_2.4b18.12.bin
