@@ -1,12 +1,13 @@
 CACHE MANIFEST 
 
-# MRPS UI 2026-09-28 single-button v2
-CACHE:
-../mrps-ui.css
-../icon0.jpeg 
+CACHE: 
+../ui/run.css
+../ui/status.js
+../icon0.jpeg
+../icon0.png
 ../img.jpg
 ../style.css
-goldhen_2.4b18.12.bin
+goldhen_2.4b18.13.bin
 index.html
 700\alert.js
 700\config.js
@@ -37,4 +38,4 @@ index.html
 700\rop\850.js
 
 NETWORK: 
-* 
+*

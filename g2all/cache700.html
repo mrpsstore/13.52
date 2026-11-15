@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html manifest="700.manifest">
-<head>
-<title>MR PS STORE | PS4 SMART HOST</title>
-<link rel="stylesheet" href="../style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="../mrps-ui.css"></head>
-<body class="mrps-host">
+<html lang="ar" dir="rtl" manifest="700.manifest">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MR PS STORE | PS4 SMART HOST</title><link rel="icon" href="../icon0.png"><link rel="stylesheet" href="../ui/run.css"></head>
+<body data-screen="cache">
 <script>
 history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
@@ -13,5 +10,18 @@ window.applicationCache.addEventListener("progress",DLProgress,false);
 window.applicationCache.oncached=function(e){DisplayCacheProgress();};
 window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 window.applicationCache.onerror=function(e){window.msgs.innerHTML="Error Installing Cache! - Clear and Re-Open Your Browser ...";};
-</script><header class="mrps-top"><span>MR PS STORE</span><span>PS4 SMART HOST</span></header><main class="mrps-panel"><img class="mrps-logo" src="../icon0.jpeg" alt="MR PS Store"><h1>MR SHERIF SMART HOST</h1><p>PS4 · 5.05 / 7.00 – 13.52</p><h2 id="msgs">Starting Cache Installation...</h2><p dir="rtl">انتظر رسالة المحرك، ولا تغلق المتصفح أثناء التشغيل.</p><div class="mrps-rule"></div></main><footer class="mrps-footer">Designed by: <a href="https://www.facebook.com/MrPs.Store.eg/">@Mr Sherif</a> | A special thanks to: <a href="https://www.facebook.com/abo.omar.739383">♥ @Abo omar</a> &amp; <a href="https://www.facebook.com/sherif.aref.545">@Eng/Sherif Aref ♥</a><br>Call: <a href="tel:01090515197">01090515197</a> | WhatsApp: <a href="https://wa.me/201550487753">01550487753</a><br><small>Engine host: GamerHack · Thanks to all original developers.</small></footer><div class="mrps-dev">Special Thanks to:<a href="https://twitter.com/_AlAzif" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@_AlAzif</a>ChendoChap<a href="https://x.com/Kameleonre_" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@Kameleonre_</a>SiSTR0 Abc</div></body>
-</html>
+</script>
+<header class="topbar"><div class="brand"><img src="../icon0.jpeg" alt="MR PS"><span>MR PS STORE</span></div><div class="online">PS4 SMART HOST</div></header>
+<main id="status-card" class="status-card">
+<img src="../icon0.jpeg" class="logo" alt="MR PS Store">
+<div class="mode">MR SHERIF MULTI FW</div>
+<h1 id="friendly-title">جاري تجهيز ملفات الأوفلاين</h1>
+<p id="friendly-detail">برجاء الانتظار وعدم إغلاق المتصفح.</p>
+<div class="meter"><div id="cache-fill" class="meter-fill"></div></div>
+<div id="notice" class="notice">لا تضغط أي زر حتى تظهر رسالة اكتمال العملية</div>
+<div id="msgs">Starting Cache Installation...</div><div id="state"></div><pre id="out"></pre>
+</main>
+<footer class="footer"><div>Call: <b>01090515197</b> &nbsp;|&nbsp; WhatsApp: <b>01550487753</b></div><div>Designed by: <span>@Mr Sherif</span> | A special thanks to: <span>♥ @Abo omar</span> &amp; <span>@Eng/Sherif Aref ♥</span></div><small>Engine host: GamerHack · Thanks to all original developers.</small></footer>
+<details style="position:relative;text-align:center;font-size:11px;padding:8px"><summary>Original developer credits</summary>Special Thanks to:<a href="https://twitter.com/_AlAzif" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@_AlAzif</a>ChendoChap<a href="https://x.com/Kameleonre_" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@Kameleonre_</a>SiSTR0 Abc</details>
+<script src="../ui/status.js"></script>
+</body></html>
